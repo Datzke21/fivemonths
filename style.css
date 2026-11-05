@@ -1,0 +1,71 @@
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--wine:#8d3f58;--rose:#d96e89;--blush:#f6cbd3;--cream:#fff8f4;--ink:#543b43;--muted:#92777e}
+html{scroll-behavior:smooth}
+body{font-family:"DM Sans",sans-serif;color:var(--ink);background:var(--cream);overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.ambient-glow{position:fixed;width:420px;height:420px;border-radius:50%;filter:blur(95px);opacity:.22;pointer-events:none;z-index:-1}
+.glow-one{background:#f2a9bd;top:-180px;left:-160px}.glow-two{background:#f5c9a8;right:-180px;bottom:5%}
+.topbar{height:78px;padding:0 7%;display:flex;align-items:center;justify-content:space-between;position:absolute;z-index:5;top:0;left:0;width:100%}
+.logo{font:2rem "Great Vibes",cursive;color:var(--wine)}.logo span{color:var(--rose)}
+.music-btn{border:1px solid #e9bdc7;background:#fffaf8;color:var(--wine);border-radius:30px;padding:11px 17px;display:flex;gap:9px;align-items:center;cursor:pointer;font:500 .82rem "DM Sans";box-shadow:0 8px 25px #713b4c12;transition:.25s}
+.music-btn:hover,.music-btn.is-playing{background:var(--wine);color:white;transform:translateY(-2px)}
+.music-icon{font-size:1.2rem}
+.hero{min-height:100vh;padding:125px 9% 95px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:5%;position:relative;background:radial-gradient(ellipse at 80% 45%,#fce4e6 0,transparent 44%),linear-gradient(125deg,#fff9f5,#fff0f2)}
+.hero-copy{max-width:650px;z-index:1}
+.kicker{font-size:.68rem;text-transform:uppercase;letter-spacing:3px;font-weight:600;color:var(--rose);margin-bottom:20px}
+h1,h2{font-family:"Playfair Display",serif;font-weight:500}
+h1{font-size:clamp(3.1rem,6.2vw,6.3rem);line-height:1.08;color:#613b48;letter-spacing:-2px}
+h1 span,h2 em{font-family:"Great Vibes",cursive;color:var(--rose);font-weight:400;letter-spacing:0}
+.hero-line{font-size:1.02rem;line-height:1.9;color:#826a70;max-width:450px;margin:26px 0 30px}
+.main-button{display:inline-flex;gap:18px;align-items:center;padding:15px 23px;border-radius:40px;background:var(--wine);color:white;box-shadow:0 12px 28px #8d3f5830;transition:.25s}
+.main-button:hover{transform:translateY(-4px);box-shadow:0 17px 30px #8d3f5840}
+.main-button span{font-size:1.3rem}.tiny-note{font-size:.6rem;letter-spacing:2.4px;color:#b08d94;margin-top:52px}
+.hero-photo-wrap{position:relative;max-width:470px;width:100%;margin:auto}
+.photo-card{position:relative;background:white;padding:14px 14px 56px;box-shadow:0 25px 70px #6c35421e;transform:rotate(3deg);transition:.5s}
+.photo-card:hover{transform:rotate(0) translateY(-7px)}
+.photo-card img{width:100%;display:block;aspect-ratio:1/1;object-fit:cover}
+.photo-card>p{text-align:center;font:1.8rem "Great Vibes",cursive;color:var(--wine);padding-top:13px}
+.photo-tape{position:absolute;z-index:2;width:115px;height:28px;background:#e8b7b6a8;left:calc(50% - 57px);top:-12px;transform:rotate(-4deg)}
+.photo-sparkle,.floating-sticker{position:absolute;color:var(--rose);z-index:2}
+.sparkle-a{font-size:2.8rem;top:-40px;right:8%}.sparkle-b{font-size:3rem;left:-35px;bottom:15%}
+.floating-sticker{font-size:3rem;filter:drop-shadow(0 5px 6px #8d3f5820);animation:bob 3.5s ease-in-out infinite}
+.sticker-heart{right:-35px;bottom:8%;color:#c95575}.sticker-star{left:-35px;top:15%;font-size:3.5rem;animation-delay:1s}
+.hero-bottom{position:absolute;bottom:28px;left:0;width:100%;text-align:center;font-size:.58rem;letter-spacing:3px;color:#b08d94}.hero-bottom span{display:block;font-size:1.2rem;margin-top:6px;animation:down 1.5s infinite}
+.section{padding:110px 8%}
+.letter-section{background:#fffdfb;text-align:center}
+.section-heading{max-width:650px;margin:0 auto 45px;text-align:center}
+h2{font-size:clamp(2.5rem,5vw,4.5rem);line-height:1.15;color:#613b48}
+.section-heading>p:last-child{color:var(--muted);line-height:1.9;margin-top:15px}
+.letter-card{max-width:690px;margin:auto;background:#fff8f5;border:1px solid #f1d6da;border-radius:8px;padding:0 8% 32px;box-shadow:0 25px 65px #703b4a12;position:relative}
+.letter-top{padding:22px 0;border-bottom:1px solid #f0d9dc;color:#b16b7d;font-size:.58rem;letter-spacing:2px}
+.letter-content{text-align:left;padding:30px 0 15px;min-height:285px}
+.script{font-family:"Great Vibes",cursive;color:var(--wine)}
+.hello{font-size:2.5rem;margin-bottom:13px}
+.typed-message{font-size:.96rem;line-height:2;color:#765d65;min-height:135px;white-space:pre-wrap}
+.signoff{text-align:right;font-size:2rem;margin-top:18px}.signoff span{color:var(--rose)}
+.text-button{border:0;background:transparent;color:var(--rose);font:500 .8rem "DM Sans";cursor:pointer;padding:10px}
+.promise-section{background:linear-gradient(135deg,#fff3f2,#fbe6e8);text-align:center}
+.promise-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;max-width:1050px;margin:0 auto}
+.promise{background:#fffaf8;border:1px solid #f2d9dc;border-radius:18px;padding:38px 26px;box-shadow:0 14px 35px #6c35420b;transition:.3s}
+.promise:hover{transform:translateY(-8px);box-shadow:0 22px 40px #6c354218}
+.promise>span{font-size:2.5rem;color:var(--rose)}
+.promise h3{font:1.4rem "Playfair Display",serif;margin:16px 0 12px;color:#704552}
+.promise p{font-size:.86rem;line-height:1.85;color:var(--muted)}
+.ending{padding:110px 8%;text-align:center;background:radial-gradient(circle at 50% 0,#f9dce2,transparent 55%),#fff8f4}
+.big-heart{font-size:3.6rem;color:var(--rose);animation:pulse 1.5s infinite;margin-bottom:24px}
+.ending h2{font-size:clamp(2.8rem,6vw,5rem)}
+.ending-text{max-width:600px;margin:25px auto 0;line-height:2;color:#806970}
+.ending-signature{font-size:2.4rem;margin-top:25px}.ending-signature span{color:var(--rose)}
+.back-link{display:inline-block;margin-top:38px;border-bottom:1px solid #d69aa8;padding-bottom:5px;color:var(--wine);font-size:.8rem}
+footer{text-align:center;padding:23px;background:#fffdfb;color:#a4878e;font-size:.75rem}footer span{color:var(--rose)}
+.hearts{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:4}
+.heart-particle{position:absolute;bottom:-45px;color:#d76d89;text-shadow:0 4px 12px #d76d8930;animation:rise linear forwards;opacity:0}
+.reveal{opacity:0;transform:translateY(35px);transition:opacity .8s ease,transform .8s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+@keyframes rise{0%{transform:translateY(0) rotate(0) scale(.7);opacity:0}12%{opacity:.7}100%{transform:translateY(-115vh) rotate(35deg) scale(1.2);opacity:0}}
+@keyframes pulse{0%,100%{transform:scale(1)}15%{transform:scale(1.18)}30%{transform:scale(1)}45%{transform:scale(1.1)}}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-8deg)}50%{transform:translateY(-14px) rotate(8deg)}}
+@keyframes down{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+@media(max-width:850px){.hero{grid-template-columns:1fr;text-align:center;padding-top:135px;gap:65px}.hero-copy{margin:auto}.hero-line{margin-left:auto;margin-right:auto}.hero-photo-wrap{max-width:390px}.tiny-note{margin-top:35px}.hero{padding-bottom:95px}}
+@media(max-width:650px){.topbar{padding:0 5%;height:70px}.logo{font-size:1.7rem}.music-btn{padding:9px 12px}.hero{padding-left:7%;padding-right:7%}h1{letter-spacing:-1px}.section{padding:82px 6%}.promise-grid{grid-template-columns:1fr;max-width:420px}.letter-card{padding-left:7%;padding-right:7%}.letter-content{min-height:340px}.hero-photo-wrap{max-width:340px}.sticker-heart{right:-17px}.sticker-star{left:-17px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
